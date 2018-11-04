@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>请输入任意文字：</h1>
+    <input class="sss" type="text" name="inputtext" onkeyup="javascript:xianshi(this);">
+    <h3 class="aaa">我是输出文字</h3>
+
+    <script type="text/javascript">
+      /**
+       * @param {number} N
+       * @return {number}
+       */
+      var binaryGap = function(N) {
+          var max_juli = 0
+          var last_one = 0
+          var er = N.toString(2)
+          if(er.match(/1/g).length<2){
+            return 0
+          }
+          for(var b in er){
+            if(er[b] === '1'){
+              max_juli = Math.max(max_juli,b - last_one)
+              last_one = b
+            }
+          }
+          return max_juli
+      };
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
