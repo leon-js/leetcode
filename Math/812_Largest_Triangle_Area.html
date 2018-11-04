@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea rows="40" cols="100"></textarea>
+
+    <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = `var largestTriangleArea = function(points) {
+          let res = 0;
+          for (let p1 of points)
+              for (let p2 of points)
+                  for (let p3 of points)
+                      res = Math.max(res, help(p1, p2, p3));
+          return res;
+      };
+      
+      var help = function(p1, p2, p3) {
+          return 0.5 * Math.abs(p3[0]*p2[1] + p2[0]*p1[1] + p1[0]*p3[1] - p1[0]*p2[1] - p3[0]*p1[1] - p2[0]*p3[1]);
+      }`
+      p.textContent = neirong
+      var largestTriangleArea = function(points) {
+          let res = 0;
+          for (let p1 of points)
+              for (let p2 of points)
+                  for (let p3 of points)
+                      res = Math.max(res, help(p1, p2, p3));
+          return res;
+      };
+
+      var help = function(p1, p2, p3) {
+          return 0.5 * Math.abs(p3[0]*p2[1] + p2[0]*p1[1] + p1[0]*p3[1] - p1[0]*p2[1] - p3[0]*p1[1] - p2[0]*p3[1]);
+      }
+
+      var a = largestTriangleArea([[0,0],[0,1],[1,0],[0,2],[2,0]])
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
