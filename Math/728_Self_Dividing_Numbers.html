@@ -19,11 +19,34 @@
   </head>
 
   <body>
-    <h1>请输入任意文字：</h1>
-    <input class="sss" type="text" name="inputtext" onkeyup="javascript:xianshi(this);">
-    <h3 class="aaa">我是输出文字</h3>
+    <textarea rows="40" cols="100"></textarea>
 
     <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = `var selfDividingNumbers = function(left, right) {
+    var test = function(num){
+        var dd = num.toString()
+        var ss = dd.split("")
+        for(var i=0;i<ss.length;i++){
+            if(ss[i]!=0){
+                if(num%parseInt(ss[i])!=0){
+                    return false
+                }
+            }else{
+                return false
+            }
+        }
+        return true
+    }
+    
+    var mm = []
+    for(var i=left;i<=right;i++){
+        if(test(i)){mm.push(i)}
+    }
+    console.log(typeof mm)
+    return mm
+};`
+p.textContent = neirong
       /**
  * @param {number} left
  * @param {number} right

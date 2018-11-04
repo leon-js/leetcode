@@ -19,11 +19,26 @@
   </head>
 
   <body>
-    <h1>请输入任意文字：</h1>
-    <input class="sss" type="text" name="inputtext" onkeyup="javascript:xianshi(this);">
-    <h3 class="aaa">我是输出文字</h3>
+    <textarea rows="40" cols="100"></textarea>
 
     <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = `var binaryGap = function(N) {
+          var max_juli = 0
+          var last_one = 0
+          var er = N.toString(2)
+          if(er.match(/1/g).length<2){
+            return 0
+          }
+          for(var b in er){
+            if(er[b] === '1'){
+              max_juli = Math.max(max_juli,b - last_one)
+              last_one = b
+            }
+          }
+          return max_juli
+      "};`
+      p.textContent = neirong
       /**
        * @param {number} N
        * @return {number}
