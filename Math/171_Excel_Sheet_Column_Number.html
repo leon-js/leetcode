@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea rows="40" cols="100"></textarea>
+
+    <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = ` var titleToNumber = function(s) {
+        var sl = s.length
+        var result=0,i=0,sc
+        while(sl!=0){
+            sc = s.charAt(sl-1)
+            result = (sc.charCodeAt()-64)*Math.pow(26,i)+result
+            sl--
+            i++
+        }
+        console.log(result)
+        return result
+    }`
+    p.textContent = neirong
+      /**
+     * @param {string} s
+     * @return {number}
+     */
+    var titleToNumber = function(s) {
+        var sl = s.length
+        var result=0,i=0,sc
+        while(sl!=0){
+            sc = s.charAt(sl-1)
+            result = (sc.charCodeAt()-64)*Math.pow(26,i)+result
+            sl--
+            i++
+        }
+        console.log(result)
+        return result
+    }
+
+    function answer(s){
+        console.log(s)
+    }
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
