@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea rows="40" cols="100"></textarea>
+
+    <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = `var calPoints = function(ops) {
+          var result = []
+          for(var i=0;i<ops.length;i++){
+            if(ops[i]=="+"){
+               result.push(result[result.length-1]+result[result.length-2])
+               console.log(result)
+            }else if(ops[i]=="D"){
+               result.push(2*result[result.length-1])
+               console.log(result)
+            }else if(ops[i]=="C"){
+               result.pop()
+               console.log(result)
+            }else{
+               result.push(parseInt(ops[i]))
+               console.log(result)
+            }
+          }
+          var end = 0
+          result.forEach(function(item){
+            end += item    
+          })
+          return end
+      };
+`
+      p.textContent = neirong
+      
+      var calPoints = function(ops) {
+          var result = []
+          for(var i=0;i<ops.length;i++){
+            if(ops[i]=="+"){
+               result.push(result[result.length-1]+result[result.length-2])
+               console.log(result)
+            }else if(ops[i]=="D"){
+               result.push(2*result[result.length-1])
+               console.log(result)
+            }else if(ops[i]=="C"){
+               result.pop()
+               console.log(result)
+            }else{
+               result.push(parseInt(ops[i]))
+               console.log(result)
+            }
+          }
+          var end = 0
+          result.forEach(function(item){
+            end += item    
+          })
+          return end
+      };
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
