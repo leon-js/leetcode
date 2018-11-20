@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea rows="40" cols="100"></textarea>
+
+    <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = `var backspaceCompare = function(S, T) {
+    if(S.length<1 || S.length>200 || T.length<1 || T.length>200){
+        return false
+    }
+    var SE = [],TE = []
+    for(var i=0;i<S.length;i++){
+        if(S[i]=="#"){
+            SE.pop()
+        }else{
+            SE.push(S[i])
+        }
+    }
+    for(var i=0;i<T.length;i++){
+        if(T[i]=="#"){
+            TE.pop()
+        }else{
+            TE.push(T[i])
+        }
+    }
+    if(SE.join("")==TE.join("")){
+        return true
+    }
+    return false
+};
+
+`
+      p.textContent = neirong
+      
+      var backspaceCompare = function(S, T) {
+    if(S.length<1 || S.length>200 || T.length<1 || T.length>200){
+        return false
+    }
+    var SE = [],TE = []
+    for(var i=0;i<S.length;i++){
+        if(S[i]=="#"){
+            SE.pop()
+        }else{
+            SE.push(S[i])
+        }
+    }
+    for(var i=0;i<T.length;i++){
+        if(T[i]=="#"){
+            TE.pop()
+        }else{
+            TE.push(T[i])
+        }
+    }
+    if(SE.join("")==TE.join("")){
+        return true
+    }
+    return false
+};
+    </script>
+  </body>
+</html>
+
+
+
+
+
