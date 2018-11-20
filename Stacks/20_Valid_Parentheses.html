@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea rows="40" cols="100"></textarea>
+
+    <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = `var isValid = function(s) {
+          if(!s.length){
+              return true
+          }
+          var kuohao = {
+            '{':'}',
+            '[':']',
+            '(':')'
+          }
+          var result = [s[0]]
+          if(result.length == 0){
+            return true
+          }
+          for(var i=1;i<s.length;i++){
+            if(kuohao[result[result.length-1]]!=s[i]){
+              result.push(s[i])
+            }else{
+              result.pop()
+            }
+          }
+          if(result.length == 0){
+            return true
+          }else{
+              return false
+          }
+      };
+
+`
+      p.textContent = neirong
+      
+      var isValid = function(s) {
+          if(!s.length){
+              return true
+          }
+          var kuohao = {
+            '{':'}',
+            '[':']',
+            '(':')'
+          }
+          var result = [s[0]]
+          if(result.length == 0){
+            return true
+          }
+          for(var i=1;i<s.length;i++){
+            if(kuohao[result[result.length-1]]!=s[i]){
+              result.push(s[i])
+            }else{
+              result.pop()
+            }
+          }
+          if(result.length == 0){
+            return true
+          }else{
+              return false
+          }
+      };
+
+      
+      
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

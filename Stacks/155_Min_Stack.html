@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea rows="40" cols="100"></textarea>
+
+    <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = `var MinStack = function() {
+          this.arr = []
+          this.a = 0
+      };
+
+      MinStack.prototype.push = function(x) {
+          this.arr[this.a]=x
+          this.a++
+      };
+
+      MinStack.prototype.pop = function() {
+          if(this.a>0){
+              this.arr = this.arr.slice(0,this.arr.length-1)
+              this.a--
+          }
+      };
+
+      MinStack.prototype.top = function() {
+          return this.arr[this.arr.length-1]
+      };
+
+      MinStack.prototype.getMin = function() {
+          var min = this.arr[0];
+          for(var n = 0; n < this.arr.length; n ++) {
+              if (this.arr[n] < min)
+                  min = this.arr[n];
+          }
+          return min;
+      };
+
+`
+      p.textContent = neirong
+      
+      var MinStack = function() {
+          this.arr = []
+          this.a = 0
+      };
+
+      MinStack.prototype.push = function(x) {
+          this.arr[this.a]=x
+          this.a++
+      };
+
+      MinStack.prototype.pop = function() {
+          if(this.a>0){
+              this.arr = this.arr.slice(0,this.arr.length-1)
+              this.a--
+          }
+      };
+
+      MinStack.prototype.top = function() {
+          return this.arr[this.arr.length-1]
+      };
+
+      MinStack.prototype.getMin = function() {
+          var min = this.arr[0];
+          for(var n = 0; n < this.arr.length; n ++) {
+              if (this.arr[n] < min)
+                  min = this.arr[n];
+          }
+          return min;
+      };
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

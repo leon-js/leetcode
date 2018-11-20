@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea rows="40" cols="100"></textarea>
+
+    <script type="text/javascript">
+      var p = document.querySelector('textarea')
+      var neirong = `var MyStack = function() {
+          this.arr = []
+          this.a = 0
+      };
+
+      MyStack.prototype.push = function(x) {
+          this.arr[this.a] = x
+          this.a++
+      };
+
+      MyStack.prototype.pop = function() {
+          var b = 0
+          if(this.a>0){
+              var c = this.arr.length
+              b = this.arr[c-1]
+              this.arr = this.arr.slice(0,this.arr.length-1)
+              this.a--
+          }
+          return b
+      };
+
+      MyStack.prototype.top = function() {
+          return this.arr[this.arr.length-1]
+      };
+
+      MyStack.prototype.empty = function() {
+          return this.arr.length == 0
+      };
+
+`
+      p.textContent = neirong
+      
+      var MyStack = function() {
+          this.arr = []
+          this.a = 0
+      };
+
+      MyStack.prototype.push = function(x) {
+          this.arr[this.a] = x
+          this.a++
+      };
+
+      MyStack.prototype.pop = function() {
+          var b = 0
+          if(this.a>0){
+              var c = this.arr.length
+              b = this.arr[c-1]
+              this.arr = this.arr.slice(0,this.arr.length-1)
+              this.a--
+          }
+          return b
+      };
+
+      MyStack.prototype.top = function() {
+          return this.arr[this.arr.length-1]
+      };
+
+      MyStack.prototype.empty = function() {
+          return this.arr.length == 0
+      };
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
